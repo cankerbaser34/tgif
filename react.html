@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- Below is the core react library -->
+   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+   <!-- Below is the react dom library -->
+   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+   <!-- Below is the Babel transpiler. Go through proper steps before copy-pasting this script -->
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <title>React Intro</title>
+</head>
+<body>
+   <div id = "app"></div>
+   <script type="text/babel">
+       class App extends React.Component {
+
+        state = {
+            name: "Cihan",
+            language: "React"
+        }
+        render () {
+               return (
+               <div className="app-content">
+                
+               <h1> Hello React </h1>
+               <p> here is the new script you can see me from here</p>
+               <p>there is dynamic content here:{ Math.random() *100} </p>
+               <p>my name is { this.state.name} and I am a { this.state.language} developer</p>
+               
+
+
+               </div>
+               )
+           }
+       }
+       
+   // The above code does nothing unless you render it with the code below...
+   ReactDOM.render(<App />, document.getElementById('app'));
+   </script>
+</body>
+</html>
+
+<p> here is the new script you can see me from here</p>
